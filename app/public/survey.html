@@ -1,12 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>PartnerFinder Survey</title>
 </head>
+
 <body>
-    PartnerFinder Survey Page
+    <div class="container">
+        <h2>Please fill out the survey below</h2>
+
+        <div class="border p-2">
+            <h3>About you</h3>
+            <div class="form-group">
+                <label for="username">Name</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="pictureURL">Link to photo image</label>
+                <input type="text" class="form-control" id="pictureURL" placeholder="Photo URL">
+            </div>
+        </div>
+
+        <h3>Question 1</h3>
+        <div class="form-group">
+            <label for="q1"><strong>You like playing sports or attending sporting events</strong></label>
+            <select class="form-control" id="q1">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <h3>Question 2</h3>
+        <div class="form-group">
+            <label for="q2"><strong>You're a patron of the arts (symphony, ballet, opera, etc.)</strong></label>
+            <select class="form-control" id="q2">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <h3>Question 3</h3>
+        <div class="form-group">
+            <label for="q3"><strong>You love the outdoors</strong></label>
+            <select class="form-control" id="q3">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <h3>Question 4</h3>
+        <div class="form-group">
+            <label for="q4"><strong>You consider yourself a patient person</strong></label>
+            <select class="form-control" id="q4">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <h3>Question 5</h3>
+        <div class="form-group">
+            <label for="q5"><strong>You would prefer a night of Netflix to a night out on the town</strong></label>
+            <select class="form-control" id="q5">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <h3>Question 6</h3>
+        <div class="form-group">
+            <label for="q6"><strong>You're a "blue sky" kind of person instead of worrying about details</strong></label>
+            <select class="form-control" id="q6">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <h3>Question 7</h3>
+        <div class="form-group">
+            <label for="q7"><strong>Spending time with other people energizes you</strong></label>
+            <select class="form-control" id="q7">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <h3>Question 8</h3>
+        <div class="form-group">
+            <label for="q8"><strong>You express you emotions openly often</strong></label>
+            <select class="form-control" id="q8">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <h3>Question 9</h3>
+        <div class="form-group">
+            <label for="q9"><strong>You consider yourself a patient person</strong></label>
+            <select class="form-control" id="q9">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <h3>Question 10</h3>
+        <div class="form-group">
+            <label for="q10"><strong>You laugh at jokes that only you find funny</strong></label>
+            <select class="form-control" id="q10">
+                <option>1 (Strongly Disagree)</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5 (Strongly Agree)</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
