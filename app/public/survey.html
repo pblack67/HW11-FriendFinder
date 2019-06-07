@@ -176,10 +176,7 @@
                 survey.scores.push(answer);
             }
 
-            console.log(survey);
-
             $.post("/api/friends", survey, function (data, status) {
-                console.log ("/api/friends POST successful. Whee.");
                 console.log(data, status);
             });
         });

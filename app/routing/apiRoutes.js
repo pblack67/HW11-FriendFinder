@@ -7,8 +7,25 @@ module.exports = function (app) {
     });
 
     app.post("/api/friends", function (request, response) {
-        console.log("/api/friends POST");
-        response.json(friendData[0]);
+        let minimumDifference = 100;
+        let bestFriend = null;
+        let friend = request.body;
+        for (let i = 0; i < friendData.length; i++) {
+            let currentDifference = getDifference(friend, friendData[i]);
+            if (currentDifference < minimumDifference) {
+                minimumDifference = currentDifference;
+                bestFriend = friendData[i];
+            }
+        }
+        response.json(bestFriend);
     });
 
 };
+
+function getDifference(friend1, friend2) {
+    let difference = 0;
+    for (let i = 0; i < friend1.scores.length; i++) {
+        difference += Math.abs(friend1.scores[i] - friend2.scores[i]);
+    }
+    return difference;
+}
