@@ -24,6 +24,7 @@
                     </div>
                     <div class="modal-body">
                         <h2 id="matchName"></h2>
+                        <img id="matchImage" src="" alt="Friend Image" width=250>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -200,6 +201,7 @@
             $.post("/api/friends", survey, function (bestFriend, status) {
                 console.log(bestFriend, status);
                 $("#matchName").text(bestFriend.name);
+                $("#matchImage").attr("src", bestFriend.photoURL);
                 $('#myModal').modal("show");
             });
         });
