@@ -6,4 +6,9 @@ module.exports = function (app) {
         response.json(friendData);
     });
 
+    app.post("/api/friends", function (request, response) {
+        console.log("/api/friends POST");
+        response.json(friendData[0]);
+    });
+
 };

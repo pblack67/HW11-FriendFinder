@@ -21,8 +21,8 @@
                 <input type="text" class="form-control" id="username" placeholder="Enter name">
             </div>
             <div class="form-group">
-                <label for="pictureURL">Link to photo image</label>
-                <input type="text" class="form-control" id="pictureURL" placeholder="Photo URL">
+                <label for="photoURL">Link to photo image</label>
+                <input type="text" class="form-control" id="photoURL" placeholder="Photo URL">
             </div>
         </div>
 
@@ -88,7 +88,8 @@
 
         <h3>Question 6</h3>
         <div class="form-group">
-            <label for="q6"><strong>You're a "blue sky" kind of person instead of worrying about details</strong></label>
+            <label for="q6"><strong>You're a "blue sky" kind of person instead of worrying about
+                    details</strong></label>
             <select class="form-control" id="q6">
                 <option>1 (Strongly Disagree)</option>
                 <option>2</option>
@@ -145,7 +146,7 @@
                 <option>5 (Strongly Agree)</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="submit btn btn-primary">Submit</button>
     </div>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -155,6 +156,35 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+
+    <script>
+        $(".submit").on("click", function (event) {
+            event.preventDefault();
+
+            let survey = {
+                "name": $("#username").val(),
+                "photoURL": $("#photoURL").val(),
+                "scores": []
+            }
+
+            for (let i = 1; i <= 10; i++) {
+                let answer = $("#q" + i).val();
+                let index = answer.indexOf(" ");
+                if (index !== -1) {
+                    answer = answer.substring(0, index);
+                }
+                survey.scores.push(answer);
+            }
+
+            console.log(survey);
+
+            $.post("/api/friends", survey, function (data, status) {
+                console.log ("/api/friends POST successful. Whee.");
+                console.log(data, status);
+            });
+        });
+
+    </script>
 </body>
 
 </html>
