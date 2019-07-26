@@ -4,6 +4,9 @@
 
 [https://friendfinder-peb.herokuapp.com/](https://friendfinder-peb.herokuapp.com/)
 
+![Survey](/images/survey.png)
+![New Friend](/images/newfriend.png)
+
 ## Overview
 
 To run the application:
