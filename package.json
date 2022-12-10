@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/pblack67/HW11-PartnerFinder#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
